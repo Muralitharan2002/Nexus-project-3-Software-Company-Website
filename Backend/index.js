@@ -10,9 +10,10 @@ const URL = process.env.DATABASE_URL;
 const app = express()
 
 app.use(cors({
-    origin: ["http://localhost:3000", "https://techysoftware.vercel.app/"],
+    origin: ["http://localhost:3000", "https://techysoftware.vercel.app"],
     credentials: true
-}))
+}));
+
 app.use(express.json())
 
 mongoose.connect(URL)
@@ -22,6 +23,8 @@ mongoose.connect(URL)
     .catch((err) => {
         console.log("Database connection failed", err)
     })
+
+app.options('*', cors());
 
 app.use('/router', Routers)
 
