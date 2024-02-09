@@ -10,7 +10,7 @@ const URL = process.env.DATABASE_URL;
 const app = express()
 
 app.use(cors({
-    origin: ["http://localhost:3000", "https://techysoftware.vercel.app"],
+    origin: "*",
     credentials: true
 }));
 
