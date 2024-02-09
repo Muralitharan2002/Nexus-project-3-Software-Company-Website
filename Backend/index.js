@@ -9,9 +9,7 @@ const URL = process.env.DATABASE_URL;
 
 const app = express()
 
-app.use(cors({
-    origin: "*"
-}));
+app.use(cors());
 
 app.use(express.json())
 
@@ -23,7 +21,7 @@ mongoose.connect(URL)
         console.log("Database connection failed", err)
     })
 
-app.options('*', cors());
+
 
 app.use('/router', Routers)
 
