@@ -1248,6 +1248,9 @@ textarea {
 }
 
 @media (max-width: 500px) {
+  .footer-layout {
+    flex-direction: column;
+  }
   .copyright {
     padding: 13px 0;
     font: 10px var(--body-font);
