@@ -101,7 +101,7 @@ function Contact() {
 
                 <div className="contact-right">
                     <h2 className="contact-title">Send us a Message:</h2>
-                    <form className='form' onSubmit={OnSubmit} autoComplete="on" >
+                    <form className='form' onSubmit={OnSubmit} autoComplete="on" noValidate >
                         <div className="top">
                             <div className="error-box">
                                 <input className='name' type="text" placeholder='Your Name' value={Name} onChange={(e) => { setName(e.target.value) }} />
